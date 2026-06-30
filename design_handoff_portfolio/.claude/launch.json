@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "aurora-portfolio",
+      "name": "riva-portfolio",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--prefix", "/Users/rivafouzdar/Desktop/portfolio/aurora-portfolio"],
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/rivafouzdar/Desktop/portfolio/riva-portfolio"],
       "port": 5173
     }
   ]
