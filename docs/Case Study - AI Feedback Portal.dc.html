@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./theme.js"></script>
+<script src="./gate.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="./lightbox.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: #fcfcff; }
+  a { color: #7c6cff; }
+  a:hover { color: #2e8bff; }
+  @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(18px,-22px) scale(1.06); } }
+</style>
+</helmet>
+<div style="--c1:#7c6cff; --c2:#2e8bff; --muted:#6e6a85; position:relative; background:#fcfcff; color:#1b1a2e; font-family:'Plus Jakarta Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; min-height:100vh;">
+  <div aria-hidden="true" style="position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0;">
+    <div style="position:absolute; top:-180px; right:-140px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(124,108,255,0.38), transparent 68%); filter:blur(8px); animation:drift 17s ease-in-out infinite;"></div>
+    <div style="position:absolute; top:1800px; left:-220px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(46,139,255,0.26), transparent 68%); filter:blur(8px); animation:drift 21s ease-in-out infinite reverse;"></div>
+  </div>
+  <div style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 clamp(18px,5vw,40px);">
+    <nav style="display:flex; flex-wrap:wrap; gap:12px 20px; justify-content:space-between; align-items:center; padding:22px 0; font-size:14px; font-weight:500;">
+      <a href="Riva Portfolio Homepage.dc.html" style="font-weight:700; color:#1b1a2e; text-decoration:none;">Riva Fouzdar</a>
+      <div style="display:flex; flex-wrap:wrap; gap:10px clamp(14px,3.5vw,30px); align-items:center;">
+        <a href="Riva Portfolio Homepage.dc.html#work" style="color:#1b1a2e; text-decoration:none; opacity:0.72;">← All work</a>
+        <a href="Riva Portfolio Homepage.dc.html#contact" style="color:#fff; text-decoration:none; background:linear-gradient(100deg,var(--c1),var(--c2)); padding:9px 18px; border-radius:999px; font-weight:600;">Get in touch</a>
+      </div>
+    </nav>
+
+    <header data-screen-label="Hero" style="padding:72px 0 48px;">
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1); background:#f1eeff; padding:6px 12px; border-radius:999px;">Case study 04</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); background:#fff; border:1px solid #eceaf8; padding:6px 12px; border-radius:999px;">Internal tool · AI evaluation</span>
+      </div>
+      <h1 style="font-weight:800; font-size:clamp(40px,6vw,76px); line-height:1.03; letter-spacing:-0.035em; max-width:17ch; text-wrap:balance;">A feedback portal for <span style="background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">evaluating AI agents</span></h1>
+      <p style="font-size:20px; line-height:1.55; color:var(--muted); max-width:56ch; margin-top:26px; text-wrap:pretty;">Our science team needed Marketplace experts to judge AI agent outputs, row by row, at scale. I designed and built the whole thing myself: a production-ready internal app, shipped in about two weeks. I vibe-coded it end to end with Kiro, a couple of weeks after I first got access to Claude and before I had access to Claude Code.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr)); margin-top:48px; background:rgba(255,255,255,0.7); border:1px solid #eceaf8; border-radius:18px; overflow:hidden;">
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">ROLE</span><span style="font-weight:600; font-size:15px;">Solo designer + builder</span></div>
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TEAM</span><span style="font-weight:600; font-size:15px;">PM, applied science, engineering</span></div>
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TIMELINE</span><span style="font-weight:600; font-size:15px;">Mar – Apr 2026</span></div>
+        <div style="padding:20px 22px; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">STATUS</span><span style="font-weight:600; font-size:15px;">Internal beta with science team</span></div>
+      </div>
+    </header>
+
+    <div style="aspect-ratio:16/9; border-radius:24px; overflow:hidden; background:linear-gradient(125deg,#e6eaff,#d9efff); box-shadow:0 30px 60px -40px rgba(124,108,255,0.55);">
+      <image-slot id="fcp-hero" src="uploads/fcp-dashboard.png" shape="rounded" radius="24" fit="cover" placeholder="Hero image"></image-slot>
+    </div>
+
+    <section data-screen-label="Problem" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:40px 80px; padding:88px 0 40px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">01 — The problem</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">AI agents need expert judgment, and experts aren't labelers</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+        <p>The science team was running pilot studies on Marketplace AI agents, including agent search quality and partner eligibility predictions. The only people who could judge those outputs were subject-matter experts: partner managers, development managers, and solutions architects.</p>
+        <p>These evaluators aren't data labelers. From their point of view, the task is simple: here's what our agent said, is it right? They review each response against their own expertise and answer a few questions about it. Admins needed to turn any dataset into a study, assign the right people, and track their progress, all while keeping sensitive data secure.</p>
+      </div>
+    </section>
+
+    <section data-screen-label="Two roles" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:18px; padding:0 0 24px;">
+      <a href="#admin-view" style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#fff; border:1px solid #eceaf8; border-radius:20px; text-decoration:none; color:#1b1a2e;" style-hover="border-color:#c9c0ff;">
+        <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#7c6cff; background:#f1eeff; padding:6px 12px; border-radius:999px;">Admin view</span>
+        <h3 style="font-weight:700; font-size:21px; letter-spacing:-0.015em;">Set up studies and assign reviewers</h3>
+        <p style="font-size:15.5px; line-height:1.6; color:var(--muted); text-wrap:pretty;">Science and product teams upload a dataset, build the survey, choose who reviews it, and track progress until results are ready to export.</p>
+        <span style="font-size:14px; font-weight:600; color:var(--c1);">See the admin flow ↓</span>
+      </a>
+      <a href="#reviewer-view" style="display:flex; flex-direction:column; gap:12px; padding:28px; background:#fff; border:1px solid #eceaf8; border-radius:20px; text-decoration:none; color:#1b1a2e;" style-hover="border-color:#b8d6ff;">
+        <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#1f6fd6; background:#e8f2ff; padding:6px 12px; border-radius:999px;">Reviewer view</span>
+        <h3 style="font-weight:700; font-size:21px; letter-spacing:-0.015em;">Evaluate agent responses, task by task</h3>
+        <p style="font-size:15.5px; line-height:1.6; color:var(--muted); text-wrap:pretty;">Reviewers are internal subject-matter experts (SMEs), like partner managers, development managers, and solutions architects. They see only their assigned projects and judge each agent response against their own domain knowledge.</p>
+        <span style="font-size:14px; font-weight:600; color:#1f6fd6;">See the reviewer flow ↓</span>
+      </a>
+    </section>
+
+    <section data-screen-label="Build vs buy" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">02 — Build vs. buy</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">We looked hard at existing tools first</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:18px;">
+        <sc-for list="{{ options }}" as="o" hint-placeholder-count="3">
+          <div style="background:#fff; border:1px solid #eceaf8; border-radius:20px; padding:26px; display:flex; flex-direction:column; gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">{{ o.kind }}</span>
+            <h3 style="font-weight:700; font-size:20px; letter-spacing:-0.015em;">{{ o.name }}</h3>
+            <p style="font-size:15.5px; line-height:1.6; color:var(--muted); text-wrap:pretty;">{{ o.why }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:17px; line-height:1.65; color:var(--muted); margin-top:32px; max-width:70ch; text-wrap:pretty;">We decided to build our own. The tool needed plain language for non-technical evaluators, support for any dataset shape, a configurable survey for each study, company sign-in and permissions, and responses stored separately for each evaluator.</p>
+    </section>
+
+    <section id="admin-view" data-screen-label="Admin view" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">03 — Admin view</span>
+        <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#7c6cff; background:#f1eeff; padding:6px 12px; border-radius:999px;">Admin</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">Admins turn a spreadsheet into a study in five steps</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:28px 48px; align-items:center; padding:28px; background:rgba(255,255,255,0.75); border:1px solid #eceaf8; border-radius:24px;">
+            <div style="display:flex; flex-direction:column; gap:14px; max-width:40ch;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:34px; height:34px; border-radius:10px; background:linear-gradient(120deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px;">{{ s.no }}</div>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Step {{ s.no }} of 5</span>
+              </div>
+              <h3 style="font-weight:700; font-size:22px; letter-spacing:-0.015em;">{{ s.t }}</h3>
+              <p style="font-size:16px; line-height:1.6; color:var(--muted); text-wrap:pretty;">{{ s.d }}</p>
+              <sc-if value="{{ s.hl }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; gap:12px; align-items:flex-start; background:#f1eeff; border-radius:14px; padding:14px 16px;">
+                  <span aria-hidden="true" style="flex:0 0 auto; width:30px; height:30px; border-radius:9px; background:linear-gradient(120deg,var(--c1),var(--c2)); color:#fff; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1.8 10S4.8 4.5 10 4.5 18.2 10 18.2 10 15.2 15.5 10 15.5 1.8 10 1.8 10z"></path><circle cx="10" cy="10" r="2.6"></circle></svg></span>
+                  <div style="display:flex; flex-direction:column; gap:4px;">
+                    <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">{{ s.hlt }}</span>
+                    <span style="font-size:14.5px; line-height:1.55; color:#1b1a2e; text-wrap:pretty;">{{ s.hl }}</span>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+            <div style="aspect-ratio:16/10; border-radius:16px; overflow:hidden; background:#fff; border:1px solid #eceaf8; box-shadow:0 20px 40px -32px rgba(124,108,255,0.5);"><image-slot id="{{ s.slot }}" src="{{ s.src }}" shape="rounded" radius="16" fit="cover" placeholder="{{ s.t }} screen"></image-slot></div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:17px; line-height:1.65; color:var(--muted); margin-top:32px; max-width:70ch; text-wrap:pretty;">After launch, admins track each reviewer's progress from the admin dashboard and can export results as CSV at any time, even partway through a study.</p>
+    </section>
+
+    <section id="reviewer-view" data-screen-label="Reviewer view" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">04 — Reviewer view</span>
+        <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#1f6fd6; background:#e8f2ff; padding:6px 12px; border-radius:999px;">Reviewer</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">Reviewers judge one agent response at a time</h2>
+        <p style="font-size:17px; line-height:1.65; color:var(--muted); max-width:62ch; text-wrap:pretty;">Reviewers are internal SMEs: partner managers, development managers, solutions architects, and other Marketplace specialists who know what a good answer looks like. Evaluation isn't their main job, so the experience had to be quick to learn and easy to fit between other work.</p>
+        <p style="font-size:17px; line-height:1.65; color:var(--muted); max-width:62ch; text-wrap:pretty;">Reviewers never see the setup. They sign in, see only what's assigned to them, and go through each task: a real user query, the agent's response, and the survey questions the admin built.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <sc-for list="{{ revSteps }}" as="s" hint-placeholder-count="4">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:28px 48px; align-items:center; padding:28px; background:rgba(255,255,255,0.75); border:1px solid #eceaf8; border-radius:24px;">
+            <div style="display:flex; flex-direction:column; gap:14px; max-width:40ch;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:34px; height:34px; border-radius:10px; background:linear-gradient(120deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px;">{{ s.no }}</div>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Step {{ s.no }} of 4</span>
+              </div>
+              <h3 style="font-weight:700; font-size:22px; letter-spacing:-0.015em;">{{ s.t }}</h3>
+              <p style="font-size:16px; line-height:1.6; color:var(--muted); text-wrap:pretty;">{{ s.d }}</p>
+              <sc-if value="{{ s.hl }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; gap:12px; align-items:flex-start; background:#f1eeff; border-radius:14px; padding:14px 16px;">
+                  <span aria-hidden="true" style="flex:0 0 auto; width:30px; height:30px; border-radius:9px; background:linear-gradient(120deg,var(--c1),var(--c2)); color:#fff; display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1.8 10S4.8 4.5 10 4.5 18.2 10 18.2 10 15.2 15.5 10 15.5 1.8 10 1.8 10z"></path><circle cx="10" cy="10" r="2.6"></circle></svg></span>
+                  <div style="display:flex; flex-direction:column; gap:4px;">
+                    <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">{{ s.hlt }}</span>
+                    <span style="font-size:14.5px; line-height:1.55; color:#1b1a2e; text-wrap:pretty;">{{ s.hl }}</span>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+            <div style="aspect-ratio:16/10; border-radius:16px; overflow:hidden; background:#fff; border:1px solid #eceaf8; box-shadow:0 20px 40px -32px rgba(124,108,255,0.5);"><image-slot id="{{ s.slot }}" src="{{ s.src }}" shape="rounded" radius="16" fit="cover" placeholder="{{ s.t }} screen"></image-slot></div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section data-screen-label="Decisions" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:24px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">05 — Key design decisions</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">Flexible for admins, fast for evaluators</h2>
+      </div>
+      <sc-for list="{{ decisions }}" as="d" hint-placeholder-count="4">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:48px 80px; align-items:center; padding:48px 0; border-top:{{ d.bt }};">
+          <div style="display:flex; flex-direction:column; gap:18px;">
+            <div style="display:flex; align-items:center; gap:12px;"><div style="width:38px; height:38px; border-radius:11px; background:linear-gradient(120deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px;">{{ d.no }}</div><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:{{ d.rc }}; background:{{ d.rb }}; padding:6px 12px; border-radius:999px;">{{ d.role }}</span></div>
+            <h3 style="font-weight:700; font-size:26px; line-height:1.15; letter-spacing:-0.02em; text-wrap:balance;">{{ d.title }}</h3>
+            <p style="font-size:16.5px; line-height:1.7; color:var(--muted); text-wrap:pretty; max-width:52ch;">{{ d.body }}</p>
+            <div style="display:flex; flex-direction:column; gap:6px; background:#f7f5ff; border-radius:12px; padding:14px 16px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">{{ d.lbl }}</span>
+              <p style="font-size:15px; line-height:1.6; text-wrap:pretty;">{{ d.todo }}</p>
+            </div>
+          </div>
+          <div style="aspect-ratio:4/3; border-radius:20px; overflow:hidden; background:linear-gradient(125deg,#ece7ff,#dbe9ff); border:1px solid #eceaf8;">
+            <image-slot id="{{ d.slot }}" src="{{ d.src }}" shape="rounded" radius="20" fit="cover" placeholder="{{ d.ph }}"></image-slot>
+          </div>
+        </div>
+      </sc-for>
+    </section>
+
+    <section data-screen-label="Process" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:40px 64px;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">06 — Process</span>
+          <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">A designer shipping code, spec first</h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+          <p>This was fully self-led. There was no PM and no requirements doc, just a need from the science team, so I defined the product myself. I used Kiro's spec-driven workflow from start to finish: instead of prompting screen by screen, I wrote three specs before any code: requirements with user stories and acceptance criteria, a design doc covering architecture, data models, and APIs, and an ordered task plan with each task linked to a requirement.</p>
+          <p>The specs kept the AI on track. Every change could be traced back to a requirement, I could scope work in small commits, and when feedback changed the plan, I updated the spec first and let the code follow.</p>
+          <p>This wasn't a prototype. I built every part of the app myself: the front end and all its features, the data model and database setup, sign-in and admin permissions, security and data-sensitivity reviews, and integrations with internal services like the employee directory. The first version was live for the team in under a week, and I kept iterating on it based on their feedback about the admin model, data storage, and data sensitivity.</p>
+          <p>At the very end, I worked with a senior engineer to make sure the app passed every internal security and safety review and was ready for beta.</p>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr)); gap:18px; margin-top:48px;">
+        <sc-for list="{{ specs }}" as="s" hint-placeholder-count="3">
+          <div style="background:#fff; border:1px solid #eceaf8; border-radius:20px; padding:26px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-weight:800; font-size:44px; line-height:1.15; padding-bottom:0.08em; letter-spacing:-0.04em; background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">{{ s.v }}</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.06em; color:#1b1a2e;">{{ s.f }}</span>
+            <span style="font-size:15px; line-height:1.5; color:var(--muted);">{{ s.l }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex; flex-direction:column; margin-top:48px; border-top:1px solid #eceaf8;">
+        <sc-for list="{{ timeline }}" as="row" hint-placeholder-count="5">
+          <div style="display:grid; grid-template-columns:minmax(90px,140px) minmax(0,1fr); gap:20px; padding:16px 0; border-bottom:1px solid #eceaf8;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--c1);">{{ row.d }}</span>
+            <span style="font-size:15.5px; line-height:1.5;">{{ row.m }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section data-screen-label="Challenges" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">07 — Challenges</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">What made it hard</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:18px;">
+        <sc-for list="{{ challenges }}" as="ch" hint-placeholder-count="4">
+          <div style="background:#fff; border:1px solid #eceaf8; border-radius:20px; padding:28px; display:flex; flex-direction:column; gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--c1);">{{ ch.no }}</span>
+            <h3 style="font-weight:700; font-size:20px; letter-spacing:-0.015em;">{{ ch.t }}</h3>
+            <p style="font-size:15.5px; line-height:1.65; color:var(--muted); text-wrap:pretty;">{{ ch.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section data-screen-label="Design system" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:40px 64px;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">08 — Design system</span>
+          <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">Cloudscape where it helps, custom where it doesn't, and fast for reviewers</h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+          <p>I used a hybrid approach. Cloudscape components handle the data-heavy views, like task tables, alerts, and loading states, where its built-in accessibility saved a lot of work. The survey builder, live preview, and evaluation screens are custom, but follow Cloudscape's visual language and dark mode.</p>
+          <p>The audience made the call. Evaluators are business experts, not developers, so the tool needed to feel friendlier and less like a console while still looking at home at Amazon.</p>
+          <p>Accessibility and speed shaped the evaluator experience. Reviewers can get through a whole study without touching the mouse: single keys answer each question type, arrow keys move between tasks, Tab jumps to notes, and "?" opens a shortcut legend that only shows the keys for the current question. Visible focus rings, skip links, and ARIA labels on custom controls keep it usable with a keyboard or screen reader.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px 14px; margin-top:4px;">
+            <sc-for list="{{ keys }}" as="k" hint-placeholder-count="6">
+              <span style="display:flex; align-items:center; gap:8px; font-size:14px; color:#1b1a2e;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; min-width:28px; text-align:center; padding:5px 8px; border-radius:7px; background:#fff; border:1px solid #dcd6f3; box-shadow:0 2px 0 #e4e0f3;">{{ k.k }}</span>{{ k.l }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr)); gap:24px; margin-top:48px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">LIGHT MODE</span>
+          <div style="aspect-ratio:16/10; border-radius:18px; overflow:hidden; background:#fff; border:1px solid #eceaf8;"><image-slot id="fcp-light" src="uploads/fcp/admin-light.png" shape="rounded" radius="18" fit="cover" placeholder="Light mode"></image-slot></div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">DARK MODE</span>
+          <div style="aspect-ratio:16/10; border-radius:18px; overflow:hidden; background:#141414; border:1px solid #eceaf8;"><image-slot id="fcp-dark" src="uploads/fcp/admin-dark.png" shape="rounded" radius="18" fit="cover" placeholder="Dark mode"></image-slot></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Next" style="border-top:1px solid #e4e0f3; margin-top:72px; padding:72px 0 0;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">09 — What's next</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:18px; margin-top:28px;">
+        <sc-for list="{{ next }}" as="item" hint-placeholder-count="3">
+          <div style="background:#fff; border:1px solid #eceaf8; border-radius:20px; padding:26px; display:flex; flex-direction:column; gap:10px;">
+            <h3 style="font-weight:700; font-size:19px; letter-spacing:-0.015em;">{{ item.t }}</h3>
+            <p style="font-size:15.5px; line-height:1.6; color:var(--muted); text-wrap:pretty;">{{ item.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <a href="Case Study - Multi-Product Solutions.dc.html" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; padding:36px 0 80px; border-top:1px solid #eceaf8; margin-top:72px; text-decoration:none; color:#1b1a2e;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">Next case study</span>
+      <span style="font-weight:800; font-size:clamp(24px,3vw,36px); letter-spacing:-0.03em;">Multi-Product Solutions →</span>
+    </a>
+  </div>
+  <footer style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:24px clamp(18px,5vw,40px) 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">
+    <span>© 2026 Riva Fouzdar</span><span>SF Bay Area</span>
+  </footer>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      options: [
+        { kind: 'Open-source labeling', name: 'Label Studio', why: 'Tested by the science team. Terms like "labeling" and "annotation" confused non-technical evaluators, and it was hard to keep each evaluator\'s responses separate.' },
+        { kind: 'Survey tools', name: 'Qualtrics, SurveyMonkey', why: "Familiar to evaluators, but they couldn't use company sign-in, connect to internal datasets, or look people up in the employee directory." },
+        { kind: 'Internal platform', name: 'Another team\'s LLM eval tool', why: "We met with the team to compare approaches. It was powerful but built for their own ML workflow, not the flexible survey-style studies we needed." },
+      ],
+      steps: [
+        { no: '1', slot: 'fcp-g1', src: 'uploads/pasted-1790537857816-0.png', t: 'Configure', d: 'Name the study, describe its goal, and set a due date.' },
+        { no: '2', slot: 'fcp-g2', src: 'uploads/pasted-1790537868101-0.png', t: 'Upload data', d: 'Drop in any CSV or Excel file. Columns are detected and given readable names, with a PII warning before upload.' },
+        { no: '3', slot: 'fcp-g3', src: 'uploads/pasted-1790537874572-0.png', t: 'Build survey', d: 'Add and reorder questions and choose which dataset columns evaluators see.', hlt: 'Live preview', hl: 'A side-by-side preview shows exactly what evaluators will see, using real rows from the uploaded dataset. It updates as admins edit, and they can step through rows to check the survey works across the whole dataset before launch.' },
+        { no: '4', slot: 'fcp-g4', src: 'uploads/pasted-1790537880290-0.png', t: 'Assign evaluators', d: 'Search the employee directory by name or alias, and optionally shuffle task order.' },
+        { no: '5', slot: 'fcp-g5', src: 'uploads/slots/fcp-g5.webp', t: 'Review & launch', d: 'Check everything on one page, jump back to any step, then create one task per row.' },
+      ],
+      keys: [
+        { k: 'G / B', l: 'Good or bad' },
+        { k: '0–5', l: 'Rating' },
+        { k: 'A / B / T', l: 'Pick A, B, or tie' },
+        { k: '← →', l: 'Previous or next task' },
+        { k: 'Tab', l: 'Jump to notes' },
+        { k: '?', l: 'Shortcut legend' },
+      ],
+      challenges: [
+        { no: '01', t: 'Deploying to internal hosting', d: "Every API call had to be signed through the hosting platform instead of a plain request. The app failed silently when sign-in registration hadn't finished, so I added retry logic and clear error messages. Deploys also clashed with the package registry config and needed a workaround." },
+        { no: '02', t: 'Recognizing internal aliases', d: 'Admins assign evaluators by company alias, so the app had to find real people. I used two sources: the platform\'s built-in lookup for exact matches, and a search service as a fallback. Results show name and job title, with keyboard navigation and manual entry if both sources fail.' },
+        { no: '03', t: 'Uploading any dataset', d: 'Each study brought a different spreadsheet. The upload accepts CSV and Excel with any columns, detects them automatically, turns raw field names into readable headers, and lets admins use all rows, a random sample, or a range. A PII warning and acknowledgment come before anything is saved.' },
+        { no: '04', t: 'Working with real sample data', d: "Real exports from the pilot studies didn't always match what each question type needed. Ranking questions, for example, needed a specific column format. We reformatted those datasets, and I added realistic mock data so the app could run and be tested locally without access to production." },
+      ],
+      revSteps: [
+        { no: '1', slot: 'fcp-r1', src: 'uploads/fcp/sme-dashboard.png', t: 'See assigned projects', d: 'The dashboard shows only the projects assigned to this reviewer, with progress, due date, and a clear next action: Start, Continue, or View results.' },
+        { no: '2', slot: 'fcp-r2', src: 'uploads/fcp/project-tasks.png', t: 'Open a project', d: 'Each project lists its tasks with a status for each one, plus overall progress and a single button to pick up where they left off.' },
+        { no: '3', slot: 'fcp-r3', src: 'uploads/slots/fcp-r3.webp', t: 'Evaluate the response', d: "Each task shows the user's query and the agent's response, then the survey questions below, with an optional notes field for what should be improved." },
+        { no: '4', slot: 'fcp-r4', src: 'uploads/slots/fcp-r4.webp', t: 'Keep moving', d: 'Keyboard shortcuts, Skip, and Previous/Next keep reviewers moving. Work auto-saves, and skipped tasks come back at the end of the queue.' },
+      ],
+      decisions: [
+        { no: '01', lbl: 'Key tradeoff', role: 'Admin', slot: 'fcp-d1', src: 'uploads/fcp/survey-builder.png', ph: 'Survey builder + live preview', title: 'A survey builder instead of a task-type picker', body: 'The first version made admins pick one task type per study. Studies needed more than that, so I replaced it with a survey builder: seven question types (rating, single and multi-select, free text, yes/no, ranking, and side-by-side comparison), drag-to-reorder, and a live preview of exactly what evaluators will see.', todo: 'More flexibility meant more setup for admins. The same survey repeats for every row of data, so admins build it once, and a non-linear wizard lets them jump between steps instead of starting over.' },
+        { no: '02', lbl: 'Key tradeoff', role: 'Reviewer', slot: 'fcp-d2', src: 'uploads/fcp/eval-binary-v2.png', ph: 'Evaluation screen with keyboard shortcuts', title: 'Built for hundreds of rows, not one', body: 'Evaluators work through long datasets, so speed matters. Keyboard shortcuts cover every answer type, with a legend that opens with "?". Work auto-saves as they go, and they can skip a hard row and come back to it at the end.', todo: 'Shortcuts help power users but can surprise everyone else. They turn off while someone is typing, and the legend changes to show only the shortcuts for the current question type.' },
+        { no: '03', lbl: 'Key tradeoff', role: 'Reviewer', slot: 'fcp-d3', src: 'uploads/fcp/sme-dashboard.png', ph: 'Evaluator dashboard', title: 'Plain language for experts, not labelers', body: 'Every screen uses words evaluators already know: projects, tasks, and questions, not annotations or labels. Raw column names like snake_case fields are turned into readable headers, and each evaluator sees only their own assigned projects with clear progress.', todo: 'Simpler words hide some of the science team\'s precision. The admin side keeps the detail they need, while evaluators get only what helps them answer.' },
+        { no: '04', lbl: 'Lesson learned', role: 'Admin', slot: 'fcp-d4', src: 'uploads/fcp/upload.png', ph: 'Data upload with guidance', title: 'Trust built into the flow', body: 'Evaluation data can include customer or partner information, so we treated it as highly confidential. Uploads show a PII warning and require an acknowledgment, and admin access is managed through a company permissions group instead of a shared passcode.', todo: 'The first prototype unlocked admin mode with a passcode, which was fast to build but flagged in team review. Moving to permissions groups took more engineering work, but let admins add or remove people without a code change.' },
+      ].map((d, i) => ({ ...d, bt: i === 0 ? 'none' : '1px dashed #e4e0f3', rc: d.role === 'Admin' ? '#7c6cff' : '#1f6fd6', rb: d.role === 'Admin' ? '#f1eeff' : '#e8f2ff' })),
+      specs: [
+        { v: '13', f: 'requirements.md', l: 'Prioritized requirements, each with user stories and acceptance criteria' },
+        { v: '1', f: 'design.md', l: 'Architecture, data models, API inventory, user flows, and error handling' },
+        { v: '32', f: 'tasks.md', l: 'Ordered implementation tasks, each linked back to a requirement' },
+      ],
+      timeline: [
+        { d: 'Early Mar', m: 'Defined the problem and wrote the requirements myself with Kiro' },
+        { d: 'Mar 10', m: 'First version live for the team, less than a week in' },
+        { d: 'Mar 13–20', m: 'Team feedback, plus a comparison session with another internal eval team' },
+        { d: 'Mar 19', m: 'Feature-complete and handed off to engineering to run in production' },
+        { d: 'Apr', m: 'Kept iterating: survey builder, evaluator profiles, export, and polish' },
+      ],
+      next: [
+        { t: 'Production launch', d: 'Move from beta to production so any approved employee can take part in studies.' },
+        { t: 'Evaluator profiles', d: 'Capture role, region, and expertise so admins can match the right experts to each study.' },
+        { t: 'Results analytics', d: 'An in-tool analytics view so the science team can spot trends without exporting to a spreadsheet.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

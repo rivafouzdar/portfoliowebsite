@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<script src="./theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,12 +30,12 @@
     <div style="position:absolute; top:2400px; left:-120px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(124,108,255,0.30), transparent 68%); filter:blur(8px); animation:drift 23s ease-in-out infinite reverse;"></div>
   </div>
 
-  <div style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 40px;">
+  <div style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 clamp(18px,5vw,40px);">
 
     <!-- NAV -->
-    <nav style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; font-size:14px; font-weight:500;">
+    <nav style="display:flex; flex-wrap:wrap; gap:12px 20px; justify-content:space-between; align-items:center; padding:22px 0; font-size:14px; font-weight:500;">
       <span style="font-weight:700; letter-spacing:-0.01em;">Riva Fouzdar</span>
-      <div style="display:flex; gap:30px; align-items:center;">
+      <div style="display:flex; flex-wrap:wrap; gap:10px clamp(14px,3.5vw,30px); align-items:center;">
         <a href="#work" style="color:#1b1a2e; text-decoration:none; opacity:0.72;">Work</a>
         <a href="#approach" style="color:#1b1a2e; text-decoration:none; opacity:0.72;">Approach</a>
         <a href="#contact" style="display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none; background:linear-gradient(100deg,var(--c1),var(--c2)); padding:9px 18px; border-radius:999px; font-weight:600; box-shadow:0 8px 20px -8px rgba(124,108,255,0.6);">Get in touch</a>
@@ -45,12 +46,12 @@
     <header style="padding:78px 0 64px;">
       <div style="display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.04em; color:var(--muted); background:#fff; border:1px solid #eceaf8; padding:8px 15px; border-radius:999px; box-shadow:0 6px 18px -12px rgba(124,108,255,0.5); margin-bottom:30px;">
         <span style="width:7px; height:7px; border-radius:50%; background:#22c55e;"></span>
-        Open to Senior Product Designer roles
+        Open to Senior Product / UX Designer roles
       </div>
       <h1 style="font-weight:800; font-size:clamp(28px,3.8vw,48px); line-height:1.1; letter-spacing:-0.03em; max-width:22ch;">
         Hi, I'm Riva and I lead <span style="background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">AI product design</span> from strategy to launch.
       </h1>
-      <div style="display:grid; grid-template-columns:1.6fr 1fr; gap:54px; margin-top:42px; align-items:end;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr)); gap:clamp(24px,5vw,54px); margin-top:42px; align-items:end;">
         <p style="font-size:18px; line-height:1.6; color:var(--muted); max-width:50ch;">Senior UX Designer at AWS, leading design for AWS Marketplace. I own large, end-to-end feature launches from first concept to release, used by millions of customers and handling a high volume of transactions, and I lead the cross-functional teams that ship them.</p>
         <div style="display:flex; flex-direction:column; gap:13px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">
           <div style="display:flex; justify-content:space-between; border-bottom:1px solid #eceaf8; padding-bottom:11px;"><span>LOCATION</span><span style="color:#1b1a2e;">SF Bay Area</span></div>
@@ -73,20 +74,23 @@
     <!-- WORK -->
     <section id="work" style="padding:88px 0 20px;">
       <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:36px;">
-        <h2 style="font-size:14px; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">Selected Work</h2>
-        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted);">03 case studies</span>
+        <h2 style="font-size:14px; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">Featured Work</h2>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted);">05 case studies</span>
       </div>
       <div style="display:flex; flex-direction:column; gap:26px;">
         <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
-          <a href="{{ p.href }}" style="text-decoration:none; color:#1b1a2e; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); background:#fff; border:1px solid #eceaf8; border-radius:24px; overflow:hidden; cursor:pointer; pointer-events:{{ p.pe }}; transition:transform 0.4s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.4s ease; box-shadow:0 1px 2px rgba(27,26,46,0.04);" style-hover="transform:translateY(-6px); box-shadow:0 30px 50px -28px rgba(124,108,255,0.5);">
+          <a href="{{ p.href }}" style="text-decoration:none; color:#1b1a2e; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); background:#fff; border:1px solid #eceaf8; border-radius:24px; overflow:hidden; cursor:pointer; pointer-events:{{ p.pe }}; transition:transform 0.4s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.4s ease; box-shadow:0 1px 2px rgba(27,26,46,0.04);" style-hover="transform:translateY(-6px); box-shadow:0 30px 50px -28px rgba(124,108,255,0.5);">
             <div style="min-height:300px; position:relative; overflow:hidden; background:{{ p.grad }};">
               <div style="position:absolute; bottom:-50px; right:-30px; width:220px; height:220px; border-radius:50%; background:linear-gradient(120deg,var(--c1),var(--c2)); opacity:0.32; filter:blur(8px);"></div>
               <sc-if value="{{ p.video }}" hint-placeholder-val="{{ false }}">
                 <video src="{{ p.video }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
               </sc-if>
-              <span style="position:absolute; top:20px; left:22px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:rgba(27,26,46,0.5);">{{ p.no }}</span>
+              <sc-if value="{{ p.img }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ p.img }}" alt="{{ p.title }}" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top left;">
+              </sc-if>
+              <span style="position:absolute; top:16px; left:16px; z-index:2; font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:500; letter-spacing:0.06em; color:#1b1a2e; background:rgba(255,255,255,0.9); backdrop-filter:blur(6px); border:1px solid rgba(27,26,46,0.08); padding:5px 10px; border-radius:999px; box-shadow:0 2px 8px rgba(27,26,46,0.08);">{{ p.no }}</span>
             </div>
-            <div style="padding:36px 38px; display:flex; flex-direction:column; justify-content:center; gap:14px;">
+            <div style="padding:clamp(22px,5vw,36px) clamp(20px,5vw,38px); display:flex; flex-direction:column; justify-content:center; gap:14px;">
               <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1); background:#f1eeff; padding:5px 11px; border-radius:999px;">{{ p.cat }}</span>
               <div style="font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.025em; text-wrap:balance;">{{ p.title }}</div>
               <div style="font-size:16px; line-height:1.55; color:var(--muted); text-wrap:pretty;">{{ p.desc }}</div>
@@ -97,7 +101,7 @@
       </div>
       <div style="margin-top:64px;">
         <h3 style="font-size:14px; font-family:'JetBrains Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); margin-bottom:20px;">Also shipped</h3>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:18px;">
           <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="3">
             <div style="background:rgba(255,255,255,0.7); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:8px;">
               <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted);">{{ h.cat }}</span>
@@ -111,12 +115,12 @@
 
     <!-- APPROACH -->
     <section id="approach" style="padding:96px 0;">
-      <div style="display:grid; grid-template-columns:1fr 1.35fr; gap:60px; align-items:start;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr)); gap:clamp(28px,5vw,60px); align-items:start;">
         <div>
           <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">Approach</span>
           <h3 style="font-weight:800; font-size:clamp(30px,3.6vw,46px); line-height:1.06; letter-spacing:-0.03em; margin-top:18px;">Most designers hand off specs. I write the code and <span style="background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">ship it.</span></h3>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:18px;">
           <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
             <div style="background:#fff; border:1px solid #eceaf8; border-radius:16px; padding:22px; box-shadow:0 1px 2px rgba(27,26,46,0.04);">
               <div style="width:34px; height:34px; border-radius:10px; background:linear-gradient(120deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; margin-bottom:14px;">{{ s.no }}</div>
@@ -130,24 +134,24 @@
   </div>
 
   <!-- CONTACT -->
-  <section id="contact" style="position:relative; z-index:1; max-width:1240px; margin:0 auto 30px; padding:0 40px;">
-    <div style="position:relative; overflow:hidden; border-radius:28px; background:linear-gradient(120deg,var(--c1),var(--c2)); color:#fff; padding:84px 56px;">
+  <section id="contact" style="position:relative; z-index:1; max-width:1240px; margin:0 auto 30px; padding:0 clamp(18px,5vw,40px);">
+    <div style="position:relative; overflow:hidden; border-radius:28px; background:linear-gradient(120deg,var(--c1),var(--c2)); color:#fff; padding:clamp(44px,9vw,84px) clamp(22px,6vw,56px);">
       <div aria-hidden="true" style="position:absolute; top:-100px; right:-60px; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.28), transparent 68%); pointer-events:none;"></div>
       <div aria-hidden="true" style="position:absolute; bottom:-120px; left:-40px; width:320px; height:320px; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.18), transparent 68%); pointer-events:none;"></div>
       <div style="position:relative;">
-        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.85;">Open to Senior Product Designer roles — AI companies</span>
-        <a href="mailto:hello@rivafouzdar.com" style="display:block; font-weight:800; font-size:clamp(36px,5.6vw,72px); line-height:1.02; letter-spacing:-0.035em; color:#fff; text-decoration:none; margin-top:22px;">Let's build something<br>people use every day →</a>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.85;">Open to Senior Product / UX Designer roles</span>
+        <a href="mailto:rivafouzdar8@gmail.com" style="display:block; font-weight:800; font-size:clamp(36px,5.6vw,72px); line-height:1.02; letter-spacing:-0.035em; color:#fff; text-decoration:none; margin-top:22px;">Let's build something<br>people use every day →</a>
         <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:44px;">
-          <a href="mailto:hello@rivafouzdar.com" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#1b1a2e; text-decoration:none; background:#fff; padding:12px 22px; border-radius:999px; font-weight:500;">Email ↗</a>
-          <a href="#" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.5); padding:12px 22px; border-radius:999px;">LinkedIn ↗</a>
-          <a href="#" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.5); padding:12px 22px; border-radius:999px;">Résumé ↗</a>
+          <a href="Riva-Fouzdar-Resume.pdf" download="Riva-Fouzdar-Resume.pdf" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#1b1a2e; text-decoration:none; background:#fff; padding:12px 22px; border-radius:999px; font-weight:500;">Résumé ↓</a>
+          <a href="https://www.linkedin.com/in/rivafouzdar/" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.5); padding:12px 22px; border-radius:999px;">LinkedIn ↗</a>
+          <a href="mailto:rivafouzdar8@gmail.com" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.5); padding:12px 22px; border-radius:999px;">Email ↗</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:24px 40px 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">
+  <footer style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:24px clamp(18px,5vw,40px) 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">
     <span>© 2026 Riva Fouzdar</span>
     <span>Designed &amp; built in code</span>
     <span>SF Bay Area</span>
@@ -187,10 +191,11 @@ class Component extends DCLogic {
       rootRef: this.rootRef,
       blobsRef: this.blobsRef,
       projects: [
-        { no: '01', title: 'Multi-Product Solutions', cat: '0→1 Product', grad: 'linear-gradient(125deg,#e6eaff,#d9efff)', desc: "The seller tools that let AWS partners package software and services into one solution, then list and sell it through a single offer set.", href: 'Case Study - Multi-Product Solutions.dc.html', video: 'uploads/solns video small-8d989b29.mp4' },
-        { no: '02', title: 'Private Offer Auto-Renewals', cat: 'Buyer + Seller', grad: 'linear-gradient(125deg,#e8e6ff,#dcecff)', desc: "Contracts that renew on terms both sides agreed to up front, so nobody has to rebuild offers or chase approvals every term.", href: 'Case Study - Auto-Renewals.dc.html' },
-        { no: '03', title: 'Search & Product Discovery Redesign', cat: 'AI Product', grad: 'linear-gradient(125deg,#e2ecff,#d6f1ff)', desc: "Turning Marketplace's busiest page from a flat list into a grid of scannable cards, with actions on each card that send more buyers to product pages.", href: 'Case Study - Search Redesign.dc.html' },
-        { no: '04', title: 'Agentic Product Discovery on AWS Marketplace', cat: 'Agentic AI', grad: 'linear-gradient(125deg,#ece7ff,#dbe9ff)', desc: "Designing an agent that helps enterprise buyers find, compare, and evaluate software, so they don't have to search catalogs by hand.", soon: true },
+        { no: '01', title: 'Multi-Product Solutions', cat: '0→1 Release', grad: 'linear-gradient(125deg,#e6eaff,#d9efff)', desc: "The seller tools that let AWS partners package software and services into one solution, then list and sell it through a single offer set.", href: 'Case Study - Multi-Product Solutions.dc.html', video: 'uploads/solns video small-8d989b29.mp4' },
+        { no: '02', title: 'Private Offer Auto-Renewals', img: 'uploads/pasted-1790538416575-0.png', cat: 'Buyer + Seller', grad: 'linear-gradient(125deg,#e8e6ff,#dcecff)', desc: "Contracts that renew on terms both sides agreed to up front, so nobody has to rebuild offers or chase approvals every term.", href: 'Case Study - Auto-Renewals.dc.html' },
+        { no: '03', title: 'Search & Product Discovery Redesign', img: 'uploads/thumb-search.webp', cat: 'Visual Design', grad: 'linear-gradient(125deg,#e2ecff,#d6f1ff)', desc: "Turning Marketplace's busiest page from a flat list into a grid of scannable cards, with actions on each card that send more buyers to product pages.", href: 'Case Study - Search Redesign.dc.html' },
+        { no: '04', title: 'AI Agent Feedback Portal', cat: 'Internal Tool · AI Evaluation', grad: 'linear-gradient(125deg,#ece7ff,#e2ecff)', img: 'uploads/fcp-dashboard.png', desc: "An internal tool where Marketplace experts review AI agent outputs row by row. I designed and built it solo as a production-ready app in two weeks.", href: 'Case Study - AI Feedback Portal.dc.html' },
+        { no: '05', title: 'Agentic Product Discovery on AWS Marketplace', cat: 'Agentic AI', grad: 'linear-gradient(125deg,#ece7ff,#dbe9ff)', desc: "Designing an agent that helps enterprise buyers find, compare, and evaluate software, so they don't have to search catalogs by hand.", soon: true },
       ].map(p => p.soon ? { ...p, href: undefined, pe: 'none', cta: 'Contact for more information →', ctaColor: 'var(--c1)', ctaDeco: 'underline', onCta: (e) => { e.preventDefault(); const el = document.getElementById('contact'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth' }); } } : { ...p, pe: 'auto', cta: 'Read case study ↗', ctaColor: 'var(--c1)', ctaDeco: 'none' }),
       highlights: [
         { cat: 'Design Systems', title: 'Cloudscape GenAI Components', desc: "New agentic UI patterns shipped to AWS's design system, used across dozens of product teams." },
