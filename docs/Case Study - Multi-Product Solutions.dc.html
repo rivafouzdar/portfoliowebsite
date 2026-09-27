@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: #fcfcff; }
+  a { color: #7c6cff; }
+  a:hover { color: #2e8bff; }
+  ::selection { background: rgba(124,108,255,0.22); }
+  @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(18px,-22px) scale(1.06); } }
+</style>
+</helmet>
+<div style="--c1:#7c6cff; --c2:#2e8bff; --ink:#1b1a2e; --muted:#6e6a85; position:relative; background:#fcfcff; color:#1b1a2e; font-family:'Plus Jakarta Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; min-height:100vh;">
+
+  <div aria-hidden="true" style="position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0;">
+    <div style="position:absolute; top:-180px; right:-140px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(124,108,255,0.38), transparent 68%); filter:blur(8px); animation:drift 17s ease-in-out infinite;"></div>
+    <div style="position:absolute; top:1400px; left:-220px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(46,139,255,0.26), transparent 68%); filter:blur(8px); animation:drift 21s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute; top:3200px; right:-160px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(90,201,255,0.24), transparent 68%); filter:blur(8px); animation:drift 19s ease-in-out infinite;"></div>
+  </div>
+
+  <div style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 40px;">
+
+    <nav style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; font-size:14px; font-weight:500;">
+      <a href="Riva Portfolio Homepage.dc.html" style="font-weight:700; letter-spacing:-0.01em; color:#1b1a2e; text-decoration:none;">Riva Fouzdar</a>
+      <div style="display:flex; gap:30px; align-items:center;">
+        <a href="Riva Portfolio Homepage.dc.html#work" style="color:#1b1a2e; text-decoration:none; opacity:0.72;">← All work</a>
+        <a href="Riva Portfolio Homepage.dc.html#contact" style="display:inline-flex; align-items:center; gap:8px; color:#fff; text-decoration:none; background:linear-gradient(100deg,var(--c1),var(--c2)); padding:9px 18px; border-radius:999px; font-weight:600; box-shadow:0 8px 20px -8px rgba(124,108,255,0.6);">Get in touch</a>
+      </div>
+    </nav>
+
+    <header data-screen-label="Hero" style="padding:72px 0 48px;">
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1); background:#f1eeff; padding:6px 12px; border-radius:999px;">Case study 01</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); background:#fff; border:1px solid #eceaf8; padding:6px 12px; border-radius:999px;">0→1 Product</span>
+      </div>
+      <h1 style="font-weight:800; font-size:clamp(40px,6vw,76px); line-height:1.03; letter-spacing:-0.035em; max-width:17ch; text-wrap:balance;">Multi-Product <span style="background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">Solutions</span> on AWS Marketplace</h1>
+      <p style="font-size:20px; line-height:1.55; color:var(--muted); max-width:54ch; margin-top:26px; text-wrap:pretty;">AWS Marketplace was built for listing one product at a time. I led design on the seller side of multi-product solutions: the Partner Central tools partners use to package software and services into one solution, take it from draft to a public listing, and sell it through a single offer set.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); margin-top:48px; background:rgba(255,255,255,0.7); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:18px; overflow:hidden;">
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">ROLE</span>
+          <span style="font-weight:600; font-size:15px;">Lead Senior UX Designer</span>
+        </div>
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TEAM</span>
+          <span style="font-weight:600; font-size:15px;">PM, SDM, multiple engineering teams, GTM</span>
+        </div>
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TIMELINE</span>
+          <span style="font-weight:600; font-size:15px;">Jan – Nov 2025</span>
+        </div>
+        <div style="padding:20px 22px; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">LAUNCHED</span>
+          <span style="font-weight:600; font-size:15px;">AWS re:Invent 2025</span>
+        </div>
+      </div>
+    </header>
+
+    <div style="height:560px; border-radius:24px; overflow:hidden; background:linear-gradient(125deg,#e6eaff,#d9efff); box-shadow:0 30px 60px -40px rgba(124,108,255,0.55);">
+      <image-slot id="mps-hero-v2" shape="rounded" radius="24" fit="cover" src="uploads/Public solution details page.png" placeholder="Hero: final solution detail page"></image-slot>
+    </div>
+
+    <section data-screen-label="Problem" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px 80px; padding:140px 0 56px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">01 — The problem</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">Partners sell solutions. Marketplace only let them list products.</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+        <p>ISVs, system integrators, channel partners, and distributors already sell outcomes offline: their own software, other vendors' products they resell, and the services to tie it all together, pitched as one answer to a problem like zero-trust security or getting data ready for AI.</p>
+        <p>In Marketplace, that package had to be broken apart into separate listings and separate private offers, with nothing tying them together. Partners lost their story, and buyers were left to rebuild the bundle themselves and approve every purchase on its own. Partners had been asking for a way to sell solutions in Marketplace for years, and this project finally delivered it.</p>
+      </div>
+    </section>
+
+    <section data-screen-label="Before / After" style="padding:24px 0 0;">
+      <div style="display:grid; grid-template-columns:minmax(120px,0.7fr) minmax(0,1fr) minmax(0,1fr); background:#fff; border:1px solid #eceaf8; border-radius:20px; overflow:hidden; font-size:15px; line-height:1.45;">
+        <div style="padding:16px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted); background:#faf9ff;"></div>
+        <div style="padding:16px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted); background:#faf9ff;">BEFORE · PRODUCT BY PRODUCT</div>
+        <div style="padding:16px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#fff; background:linear-gradient(100deg,var(--c1),var(--c2));">AFTER · AS A SOLUTION</div>
+        <sc-for list="{{ compare }}" as="r" hint-placeholder-count="5">
+          <div style="padding:18px 22px; border-top:1px solid #eceaf8; font-weight:700;">{{ r.k }}</div>
+          <div style="padding:18px 22px; border-top:1px solid #eceaf8; color:var(--muted);">{{ r.before }}</div>
+          <div style="padding:18px 22px; border-top:1px solid #eceaf8; background:#f7f5ff;">{{ r.after }}</div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section data-screen-label="Users" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:48px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">02 — Who it serves</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">Four kinds of seller, one creation flow</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;">
+        <sc-for list="{{ sellers }}" as="s" hint-placeholder-count="4">
+          <div style="background:rgba(255,255,255,0.75); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">{{ s.tag }}</span>
+            <div style="font-weight:700; font-size:17px; letter-spacing:-0.01em;">{{ s.title }}</div>
+            <div style="font-size:14px; line-height:1.5; color:var(--muted); text-wrap:pretty;">{{ s.body }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:16px; line-height:1.6; color:var(--muted); margin-top:22px; max-width:68ch;">Whatever sellers build shows up for <strong style="color:#1b1a2e;">enterprise buyers</strong> as one solution page and one offer set. I checked every seller-side decision against what the buyer would end up seeing.</p>
+    </section>
+
+    <section data-screen-label="Decisions" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:24px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">03 — The seller journey</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">From draft to deal, in four stages</h2>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ decisions }}" as="d" hint-placeholder-count="4">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:48px 80px; align-items:center; padding:72px 0; border-top:{{ d.bt }};">
+            <div style="display:flex; flex-direction:column; gap:18px;">
+              <div style="width:38px; height:38px; border-radius:11px; background:linear-gradient(120deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px;">{{ d.no }}</div>
+              <h3 style="font-weight:700; font-size:26px; line-height:1.15; letter-spacing:-0.02em; text-wrap:balance;">{{ d.title }}</h3>
+              <p style="font-size:16.5px; line-height:1.7; color:var(--muted); text-wrap:pretty; max-width:52ch;">{{ d.body }}</p>
+              <div style="display:flex; flex-direction:column; gap:6px; border-left:0; background:#f7f5ff; border-radius:12px; padding:14px 16px;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">Key tradeoff</span>
+                <p style="font-size:15px; line-height:1.6; color:#1b1a2e; text-wrap:pretty;">{{ d.todo }}</p>
+              </div>
+              <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); background:#fff; border:1px solid #eceaf8; padding:5px 11px; border-radius:999px;">{{ d.side }}</span>
+            </div>
+            <div style="aspect-ratio:4/3; border-radius:20px; overflow:hidden; background:#fff; border:1px solid #eceaf8; box-shadow:0 24px 50px -36px rgba(124,108,255,0.5);">
+              <sc-if value="{{ d.src }}" hint-placeholder-val="{{ false }}"><img loading="lazy" src="{{ d.src }}" alt="{{ d.ph }}" style="display:block; width:100%; height:auto;"></sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section data-screen-label="Process" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px 64px;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">04 — Process</span>
+          <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">Designed with partners, in the room</h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+          <p>Multi-product solutions is a new way for partners to sell, so I wanted the people who would use it involved from the start. I tested designs with ISVs, system integrators, channel partners, and distributors at every stage, from early concepts to near-final flows.</p>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-top:56px;">
+        <div style="background:rgba(255,255,255,0.75); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:16px; padding:24px; display:flex; flex-direction:column; gap:10px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">Focus groups</span>
+          <div style="font-weight:700; font-size:18px; letter-spacing:-0.01em;">Hours of group sessions</div>
+          <div style="font-size:14.5px; line-height:1.55; color:var(--muted); text-wrap:pretty;">I walked groups of partners through the creation and offer set flows to find where their real-world bundles didn't fit the model.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.75); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:16px; padding:24px; display:flex; flex-direction:column; gap:10px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">Partner 1:1s</span>
+          <div style="font-weight:700; font-size:18px; letter-spacing:-0.01em;">Deep dives by seller type</div>
+          <div style="font-size:14.5px; line-height:1.55; color:var(--muted); text-wrap:pretty;">One-on-one sessions with individual partners showed how an ISV, an SI, and a distributor each package and price a solution differently.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.75); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:16px; padding:24px; display:flex; flex-direction:column; gap:10px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">EMEA · APJ</span>
+          <div style="font-weight:700; font-size:18px; letter-spacing:-0.01em;">Partner summits abroad</div>
+          <div style="font-size:14.5px; line-height:1.55; color:var(--muted); text-wrap:pretty;">I traveled to AWS partner conferences and summits in EMEA and APJ to present the designs and get feedback from partners who wanted this feature.</div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:32px 56px; align-items:center; margin-top:80px; background:#fff; border:1px solid #eceaf8; border-radius:24px; padding:48px;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">Naming the feature</span>
+          <h3 style="font-weight:700; font-size:26px; line-height:1.15; letter-spacing:-0.02em; text-wrap:balance;">Research changed the product's name</h3>
+          <p style="font-size:16.5px; line-height:1.65; color:var(--muted); text-wrap:pretty;">The feature started as "composable solutions." Partners kept stumbling over the term: it described how the feature was built, not what they were selling. I ran surveys and spoke with partners directly to test terminology across the whole feature, wrote the proposal doc to rename it, and saw it through legal review. It launched as multi-product solutions.</p>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap;">
+          <span style="font-weight:700; font-size:clamp(20px,2.2vw,26px); letter-spacing:-0.02em; color:#b0a8d6; text-decoration:line-through; text-decoration-thickness:2px;">Composable solutions</span>
+          <span style="font-size:22px; color:var(--c1);">→</span>
+          <span style="font-weight:800; font-size:clamp(22px,2.4vw,30px); letter-spacing:-0.025em; background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">Multi-product solutions</span>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; border:1.5px dashed #cdc7e6; border-radius:16px; padding:22px 24px; margin-top:22px; font-size:15px; line-height:1.6; color:#8a82b8;">
+        <strong style="color:#6e6a85; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em;">NEEDS YOUR INPUT</strong>
+        <span>One or two things partners told you that changed the design, e.g. products you resell, per-component terms, or the listing rules.</span>
+      </div>
+    </section>
+
+    <section data-screen-label="Outcomes" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">05 — Outcome</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:28px;">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+          <div style="background:#fff; border:1px solid #eceaf8; border-radius:20px; padding:28px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.04em; background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">{{ s.v }}</span>
+            <span style="font-size:15px; line-height:1.45; color:var(--muted);">{{ s.l }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:17px; line-height:1.65; color:var(--muted); margin-top:28px; max-width:68ch; text-wrap:pretty;">Launch partners included Okta, Accenture, SCC, Westcon-Comstor, and TEKsystems, covering all four seller types from day one. <span style="color:#8a82b8; font-style:italic;">[Add adoption or business metrics if you can share them.]</span></p>
+    </section>
+
+    <section data-screen-label="Reflection" style="padding:120px 0 40px;">
+      <div style="background:rgba(255,255,255,0.7); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:24px; padding:48px; display:flex; flex-direction:column; gap:16px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">06 — Reflection</span>
+        <p style="font-weight:600; font-size:clamp(17px,1.7vw,20px); line-height:1.5; letter-spacing:-0.01em; max-width:60ch; color:#1b1a2e;">Adding a new selling model to a mature platform isn't only a UI problem. Engineering and I had several disagree-and-commit moments along the way. I worked closely with them to define the API model for the solution entity, and we built it out in a customer-obsessed way so the underlying structure matched how buyers and partners actually think about solutions.</p>
+      </div>
+    </section>
+
+    <section data-screen-label="References" style="padding:0 0 56px; display:flex; flex-direction:column; gap:18px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">References</span>
+      <div style="display:flex; flex-direction:column; border-top:1px solid #eceaf8;">
+        <a href="https://aws.amazon.com/about-aws/whats-new/2025/11/introducing-multi-product-solutions-aws-marketplace/" target="_blank" rel="noopener" style="display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; border-bottom:1px solid #eceaf8; text-decoration:none; color:#1b1a2e;" style-hover="color:#7c6cff;">
+          <span style="display:flex; flex-direction:column; gap:4px;"><span style="font-weight:600; font-size:16px;">Introducing multi-product solutions in AWS Marketplace</span><span style="font-size:13.5px; color:var(--muted);">AWS What's New · Launch announcement</span></span>
+          <span style="font-size:18px; color:var(--c1);">↗</span>
+        </a>
+        <a href="https://aws.amazon.com/blogs/awsmarketplace/evolving-the-cloud-marketplace-to-support-solution-centric-procurement/" target="_blank" rel="noopener" style="display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; border-bottom:1px solid #eceaf8; text-decoration:none; color:#1b1a2e;" style-hover="color:#7c6cff;">
+          <span style="display:flex; flex-direction:column; gap:4px;"><span style="font-weight:600; font-size:16px;">Evolving the cloud marketplace to support solution-centric procurement</span><span style="font-size:13.5px; color:var(--muted);">AWS Marketplace Blog · Launch post</span></span>
+          <span style="font-size:18px; color:var(--c1);">↗</span>
+        </a>
+        <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/multi-product-solutions.html" target="_blank" rel="noopener" style="display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; border-bottom:1px solid #eceaf8; text-decoration:none; color:#1b1a2e;" style-hover="color:#7c6cff;">
+          <span style="display:flex; flex-direction:column; gap:4px;"><span style="font-weight:600; font-size:16px;">Multi-product solutions</span><span style="font-size:13.5px; color:var(--muted);">AWS Marketplace Buyer Guide · Documentation</span></span>
+          <span style="font-size:18px; color:var(--c1);">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <a href="Case Study - Auto-Renewals.dc.html" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; padding:36px 0 80px; border-top:1px solid #eceaf8; margin-top:40px; text-decoration:none; color:#1b1a2e;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">Next case study</span>
+      <span style="font-weight:800; font-size:clamp(24px,3vw,36px); letter-spacing:-0.03em;">Private Offer Auto-Renewals →</span>
+    </a>
+  </div>
+
+  <footer style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:24px 40px 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">
+    <span>© 2026 Riva Fouzdar</span>
+    <span>Designed &amp; built in code</span>
+    <span>SF Bay Area</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      compare: [
+        { k: 'Listing', before: 'One listing per product, with no link between them', after: 'One solution that groups every component under a shared story' },
+        { k: 'Packaging', before: 'Only your own products', after: 'Your products, services, and products you are authorized to resell' },
+        { k: 'Positioning', before: 'Feature-level product pages', after: 'Use cases and business outcomes, plus how the pieces fit together' },
+        { k: 'Selling', before: 'A separate private offer for every product', after: 'One offer set per customer, with pricing and terms kept per component' },
+        { k: 'For the buyer', before: 'Rebuild the bundle and approve each purchase', after: 'One page to evaluate, one acceptance to buy' },
+      ],
+      sellers: [
+        { tag: 'ISV', title: 'Software vendors', body: 'Bundle their own software with deployment services. Launch example: Okta.' },
+        { tag: 'Channel', title: 'Channel partners', body: 'Combine their services with ISV products they are authorized to resell. Launch example: SCC.' },
+        { tag: 'SI', title: 'System integrators', body: 'Package software and services from one or more partners. Launch example: Accenture.' },
+        { tag: 'Distributor', title: 'Distributors', body: 'Orchestrate several ISVs into a single offering. Launch example: Westcon-Comstor.' },
+      ],
+      decisions: [
+        { no: '01', side: 'Seller · Partner Central', slot: 'mps-s1', src: 'uploads/Create new solution.png', ph: 'Create new solution: products + use cases', title: 'A guided flow for building a solution', body: 'Sellers name the solution, attach Marketplace products and services (their own or ones they resell), and describe the use cases it solves, then review everything before creating it. The flow works the same for all four seller types.', todo: "The hardest part was letting sellers add products they don't own. A reseller bundling Elastic had to be able to find and attach another vendor's listing without us exposing that vendor's private pricing. We split it into two steps: 'Tell us what you sell' to pick the products, then private pricing handled later in the offer set, so partners could build the story first and negotiate terms on a deal-by-deal basis afterward." },
+        { no: '02', side: 'Seller · Partner Central', slot: 'mps-s2', src: 'uploads/Publish solution.png', ph: 'Update visibility', title: 'A clear path from draft to public listing', body: 'The solution details page shows sellers what comes next: enrich the solution with use cases, media, and resources, then activate it: first for APN co-selling benefits, then for a public listing. The visibility step puts the rules right next to the choice (ACE eligibility, at least two Marketplace products with at least one you own, and a use case) and asks for consent from third-party publishers up front.', todo: "Most early solutions won't meet the public listing rules on day one, but we didn't want to stop partners from creating them. So a solution is always saved as Limited first, and the rules only appear at the moment a partner chooses Public. Partners can start co-selling with AWS right away and work toward a listing." },
+        { no: '03', side: 'Seller · Partner Central', slot: 'mps-s3', src: 'uploads/Offerset details page.png', ph: 'Offer set details page', title: 'One offer set per customer, with terms per component', body: 'Sellers put private offers for every component into a single offer set for a specific customer. Each offer keeps its own pricing model (contract, pay-as-you-go, or free) and terms, and the whole set is published once.', todo: "Every offer in a set has its own expiration date, buyer accounts, and terms, all of which need to be in sync prior to publishing. Instead of blocking partners with errors while they edit, we check the whole set only at 'Review and publish' and flag any mismatches (like a different buyer account or an offer that expires early) before it goes to the customer." },
+        { no: '04', side: 'Where it lands · Buyer', slot: 'mps-s4', src: 'uploads/Comfirmation page.jpg', ph: 'Buyer: solution page / offer set review', title: 'What the seller builds, the buyer buys at once', body: 'On the buyer side, the solution appears as one page listing every product it includes, and the offer set arrives as one purchase: review each offer, see the total cost, and accept once. The confirmation turns that single purchase back into separate agreements, one per component, each with its own next step.', todo: "Buyers wanted one approval, but finance and IT still need to manage each product on its own, especially since each may have different contract types and durations. We kept the purchase bundled and the ownership separate: one acceptance creates one agreement per component, each with its own renewal options and next steps. " },
+      ].map((d, i) => ({ ...d, bt: i === 0 ? 'none' : '1px dashed #e4e0f3' })),
+      stats: [
+        { v: '50+', l: 'Multi-product solutions live at launch' },
+        { v: '5', l: 'Product types supported, from SaaS to AI agents and professional services' },
+        { v: 'All', l: 'AWS Regions where Marketplace operates' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

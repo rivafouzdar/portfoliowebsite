@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: #fcfcff; }
+  a { color: #7c6cff; }
+  a:hover { color: #2e8bff; }
+  @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(18px,-22px) scale(1.06); } }
+</style>
+</helmet>
+<div style="--c1:#7c6cff; --c2:#2e8bff; --muted:#6e6a85; position:relative; background:#fcfcff; color:#1b1a2e; font-family:'Plus Jakarta Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; min-height:100vh;">
+  <div aria-hidden="true" style="position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0;">
+    <div style="position:absolute; top:-180px; right:-140px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(124,108,255,0.38), transparent 68%); filter:blur(8px); animation:drift 17s ease-in-out infinite;"></div>
+    <div style="position:absolute; top:1600px; left:-220px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(46,139,255,0.26), transparent 68%); filter:blur(8px); animation:drift 21s ease-in-out infinite reverse;"></div>
+  </div>
+  <div style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:0 40px;">
+    <nav style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; font-size:14px; font-weight:500;">
+      <a href="Riva Portfolio Homepage.dc.html" style="font-weight:700; color:#1b1a2e; text-decoration:none;">Riva Fouzdar</a>
+      <div style="display:flex; gap:30px; align-items:center;">
+        <a href="Riva Portfolio Homepage.dc.html#work" style="color:#1b1a2e; text-decoration:none; opacity:0.72;">← All work</a>
+        <a href="Riva Portfolio Homepage.dc.html#contact" style="color:#fff; text-decoration:none; background:linear-gradient(100deg,var(--c1),var(--c2)); padding:9px 18px; border-radius:999px; font-weight:600;">Get in touch</a>
+      </div>
+    </nav>
+
+    <header data-screen-label="Hero" style="padding:72px 0 48px;">
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1); background:#f1eeff; padding:6px 12px; border-radius:999px;">Case study 03</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); background:#fff; border:1px solid #eceaf8; padding:6px 12px; border-radius:999px;">Buyer UX · Conversion</span>
+      </div>
+      <h1 style="font-weight:800; font-size:clamp(40px,6vw,76px); line-height:1.03; letter-spacing:-0.035em; max-width:17ch; text-wrap:balance;">Search &amp; product discovery on <span style="background:linear-gradient(100deg,var(--c1),var(--c2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">AWS Marketplace</span></h1>
+      <p style="font-size:20px; line-height:1.55; color:var(--muted); max-width:54ch; margin-top:26px; text-wrap:pretty;">Search is the busiest page in AWS Marketplace, but its results were a long, text-heavy list. I redesigned it as a grid of scannable product cards, with actions right on each card, to get more buyers from search to product pages and, ultimately, to increase conversion.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); margin-top:48px; background:rgba(255,255,255,0.7); border:1px solid #eceaf8; border-radius:18px; overflow:hidden;">
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">ROLE</span><span style="font-weight:600; font-size:15px;">Lead Senior UX Designer</span></div>
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TEAM</span><span style="font-weight:600; font-size:15px;">PM, SDM, search engineering, data science</span></div>
+        <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TIMELINE</span><span style="font-weight:600; font-size:15px;">Apr – Jun 2026</span></div>
+        <div style="padding:20px 22px; display:flex; flex-direction:column; gap:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">STATUS</span><span style="font-weight:600; font-size:15px;">Live on AWS Marketplace</span></div>
+      </div>
+    </header>
+
+    <div style="aspect-ratio:16/9; border-radius:24px; overflow:hidden; background:linear-gradient(125deg,#e6eaff,#d9efff); box-shadow:0 30px 60px -40px rgba(124,108,255,0.55);">
+      <image-slot id="search-hero" shape="rounded" radius="24" fit="cover" placeholder="Hero: new grid search results page"></image-slot>
+    </div>
+
+    <section data-screen-label="Problem" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px 80px; padding:140px 0 56px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">01 — The problem</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">A wall of text between buyers and the product they need</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+        <p>The old results page gave each listing a full-width row: a logo, a title link, and a long, cut-off description. Only three or four results fit on screen, similar listings from the same seller were hard to tell apart, and the details buyers use to decide (pricing model, free trial, delivery method) were hidden until they clicked through.</p>
+        <p>The only action was the title link. Buyers had to open each product page to see if it was worth a closer look, so many left search without opening any.</p>
+      </div>
+    </section>
+
+    <section data-screen-label="Before / After" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:24px; padding:24px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">BEFORE · FLAT LIST</span>
+        <div style="aspect-ratio:4/3; border-radius:20px; overflow:hidden; background:#fff; border:1px solid #eceaf8;"><img src="uploads/old search.jpg" alt="Old list-style search results" style="display:block; width:100%; height:auto;"></img></div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--c1);">AFTER · GRID + CARD ACTIONS</span>
+        <div style="aspect-ratio:4/3; border-radius:20px; overflow:hidden; background:linear-gradient(125deg,#ece7ff,#dbe9ff); border:1px solid #eceaf8;"><image-slot id="search-after" shape="rounded" radius="20" fit="cover" placeholder="New grid view (same query)"></image-slot></div>
+      </div>
+    </section>
+
+    <section data-screen-label="Decisions" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:24px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">02 — Key design decisions</span>
+        <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">Scan faster, decide sooner</h2>
+      </div>
+      <sc-for list="{{ decisions }}" as="d" hint-placeholder-count="3">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:48px 80px; align-items:center; padding:72px 0; border-top:{{ d.bt }};">
+          <div style="display:flex; flex-direction:column; gap:18px;">
+            <div style="width:38px; height:38px; border-radius:11px; background:linear-gradient(120deg,var(--c1),var(--c2)); display:flex; align-items:center; justify-content:center; color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px;">{{ d.no }}</div>
+            <h3 style="font-weight:700; font-size:26px; line-height:1.15; letter-spacing:-0.02em; text-wrap:balance;">{{ d.title }}</h3>
+            <p style="font-size:16.5px; line-height:1.7; color:var(--muted); text-wrap:pretty; max-width:52ch;">{{ d.body }}</p>
+            <div style="display:flex; flex-direction:column; gap:6px; background:#f7f5ff; border-radius:12px; padding:14px 16px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--c1);">Key tradeoff</span>
+              <p style="font-size:15px; line-height:1.6; text-wrap:pretty;">{{ d.todo }}</p>
+            </div>
+          </div>
+          <div style="aspect-ratio:4/3; border-radius:20px; overflow:hidden; background:linear-gradient(125deg,#ece7ff,#dbe9ff); border:1px solid #eceaf8;">
+            <image-slot id="{{ d.slot }}" shape="rounded" radius="20" fit="cover" placeholder="{{ d.ph }}"></image-slot>
+          </div>
+        </div>
+      </sc-for>
+    </section>
+
+    <section data-screen-label="Process" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px 64px;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">03 — Process</span>
+          <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; text-wrap:balance;">Tested on the highest-traffic page</h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:18px; font-size:17px; line-height:1.65; color:var(--muted); text-wrap:pretty;">
+          <p>Because search gets so much traffic, even small changes to the layout affect a huge number of buyers. I explored several card layouts and grid densities, ran usability sessions with enterprise buyers, and worked with data science on an A/B test. We then rolled the change out gradually over about a month, watching engagement at each step before launching to everyone.</p>
+          <p style="color:#8a82b8; font-style:italic;">[Confirm or correct: number of usability sessions, A/B test length, and what the losing variants were.]</p>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Outcomes" style="border-top:1px solid #e4e0f3; margin-top:120px; padding:120px 0 0;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">04 — Outcome</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:28px;">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+          <div style="background:#fff; border:1px solid #eceaf8; border-radius:20px; padding:28px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.04em; color:#b0a8d6;">{{ s.v }}</span>
+            <span style="font-size:15px; line-height:1.45; color:var(--muted);">{{ s.l }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:17px; line-height:1.65; color:var(--muted); margin-top:28px; max-width:68ch;">The grid view is now live on AWS Marketplace search for all buyers.</p>
+    </section>
+
+    <a href="Case Study - Multi-Product Solutions.dc.html" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; padding:36px 0 80px; border-top:1px solid #eceaf8; margin-top:120px; text-decoration:none; color:#1b1a2e;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">Next case study</span>
+      <span style="font-weight:800; font-size:clamp(24px,3vw,36px); letter-spacing:-0.03em;">Multi-Product Solutions →</span>
+    </a>
+  </div>
+  <footer style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:24px 40px 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);">
+    <span>© 2026 Riva Fouzdar</span><span>SF Bay Area</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      decisions: [
+        { no: '01', slot: 'search-d1', ph: 'Grid of product cards', title: 'From a list to a scannable grid', body: 'A responsive card grid fits two to three times as many results on screen. Each card follows the same structure (logo, title, seller, short description, key badges), so buyers can compare listings at a glance instead of reading paragraph after paragraph.', todo: 'Showing more results meant showing less text for each one. We cut descriptions to a short snippet and moved decision-making details, like pricing model and free trial, into consistent badges.' },
+        { no: '02', slot: 'search-d2', ph: 'Card anatomy + CTAs', title: 'Actions on every card', body: 'Cards now include their own actions, so buyers can take the next step, such as viewing purchase options or starting a free trial, right from the results page. Each action leads into the product page at the right spot, so buyers skip the extra scrolling.', todo: 'More buttons can mean more noise. We limited each card to one primary action and one secondary action, chosen from what the listing actually supports, so cards stay clean and every action is relevant.' },
+        { no: '03', slot: 'search-d3', ph: 'Card badges', title: 'Badges that answer the first questions', body: 'Before opening a listing, buyers want to know a few things: can I try it, is it deployed on AWS, and how quickly can I get it running? Badges for Free trial, AWS Free Tier, Deployed on AWS, Quick Launch, and Multi-product solution sit in the same place on every card, so buyers can compare results at a glance.', todo: 'We wanted to highlight what matters to buyers without relying on seller-written copy. Badges come from structured listing data, not descriptions, so they stay accurate and consistent across every search.' },
+      ].map((d, i) => ({ ...d, bt: i === 0 ? 'none' : '1px dashed #e4e0f3' })),
+      stats: [
+        { v: '[+X%]', l: 'Click-through from search to product pages' },
+        { v: '[+X%]', l: 'Conversions from card-level actions' },
+        { v: '[X]', l: 'Results visible above the fold, up from 3–4' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
