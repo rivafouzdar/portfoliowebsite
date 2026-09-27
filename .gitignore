@@ -1,0 +1,21 @@
+# OS cruft
+.DS_Store
+
+# Node
+node_modules/
+
+# Local-only working files (not part of the hosted site in docs/)
+# Anchored to repo root so nothing under docs/ is affected.
+/design_handoff_portfolio/
+/riva-portfolio/
+/portfolio-studio/
+/index.html
+/*.zip
+/*.mov
+/*.mp4
+/*.fig
+/*.png
+/*.jpg
+/*.jpeg
+/portfolio-sep-26/
+/Final designs*/
