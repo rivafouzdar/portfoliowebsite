@@ -9,7 +9,6 @@
   gtag('js', new Date());
   gtag('config', 'G-ESLQ1GRKXY');
 </script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -66,7 +65,7 @@
         </div>
         <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;">
           <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TEAM</span>
-          <span style="font-weight:600; font-size:15px;">PM, SDM, multiple engineering teams, GTM</span>
+          <span style="font-weight:600; font-size:15px;">PM, Software Development Manager, multiple engineering teams, GTM</span>
         </div>
         <div style="padding:20px 22px; border-right:1px solid #eceaf8; display:flex; flex-direction:column; gap:6px;">
           <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--muted);">TIMELINE</span>
@@ -111,7 +110,7 @@
       <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:48px;">
         <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">02 — Who it serves</span>
         <h2 style="font-weight:800; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.03em; max-width:24ch; text-wrap:balance;">Multiple sellers behind the deal, one point of contact for the buyer</h2>
-        <p style="font-size:17px; line-height:1.65; color:var(--muted); max-width:64ch; text-wrap:pretty;">Every solution has a <strong style="color:#1b1a2e;">lead seller</strong> who owns it and the relationship with the buyer. The lead brings in <strong style="color:#1b1a2e;">authorized resellers</strong> and partners whose software and services are part of the bundle. They collaborate behind the scenes on products, pricing, and delivery, so the buyer deals with one seller and subscribes in one click instead of coordinating several vendors, while still getting a separate contract to manage for each product.</p>
+        <p style="font-size:17px; line-height:1.65; color:var(--muted); max-width:64ch; text-wrap:pretty;">Every solution has a <strong style="color:#1b1a2e;">lead seller</strong> who owns it and the relationship with the buyer. The lead brings in <strong style="color:#1b1a2e;">authorized resellers</strong> and partners whose software and services are part of the bundle. They collaborate behind the scenes on products, pricing, and delivery, so the buyer deals with one seller instead of coordinating several vendors. The buyer subscribes in one click and still gets a separate contract to manage for each product.</p>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:stretch; margin-bottom:48px;">
           <div style="flex:1 1 220px; display:flex; flex-direction:column; gap:8px; padding:22px; background:#f1eeff; border:1px solid #eceaf8; border-radius:16px;">
@@ -132,7 +131,7 @@
             <div style="font-size:14px; line-height:1.5; color:var(--muted); text-wrap:pretty;">Gets one solution page, a one-click subscription, and one contact for the whole deal, with a separate contract to manage for each product included.</div>
           </div>
       </div>
-      <span style="display:block; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:16px;">Any of these can be the lead seller</span>
+      <span style="display:block; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:16px;">Any of the four seller types can be the lead seller</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr)); gap:18px;">
         <sc-for list="{{ sellers }}" as="s" hint-placeholder-count="4">
           <div style="background:rgba(255,255,255,0.75); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:8px;">
@@ -323,13 +322,13 @@
           </div>
         </sc-for>
       </div>
-      <p style="font-size:17px; line-height:1.65; color:var(--muted); margin-top:28px; max-width:68ch; text-wrap:pretty;">Launch partners included Okta, Accenture, SCC, Westcon-Comstor, and TEKsystems, covering all four seller types from day one. In the months after launch, partners across all four seller types published multi-product solutions, and buyers could buy bundled software and services in a single transaction instead of several separate ones.</p>
+      <p style="font-size:17px; line-height:1.65; color:var(--muted); margin-top:28px; max-width:68ch; text-wrap:pretty;">Launch partners included Okta, Accenture, SCC, Westcon-Comstor, and TEKsystems, covering all four seller types from day one. In the months after launch, more partners published multi-product solutions, and buyers could buy bundled software and services in a single transaction instead of several separate ones.</p>
     </section>
 
     <section data-screen-label="Reflection" style="padding:72px 0 32px;">
       <div style="background:rgba(255,255,255,0.7); backdrop-filter:blur(8px); border:1px solid #eceaf8; border-radius:24px; padding:clamp(24px,5vw,48px); display:flex; flex-direction:column; gap:16px;">
         <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);">07 — Reflection</span>
-        <p style="font-weight:600; font-size:clamp(17px,1.7vw,20px); line-height:1.5; letter-spacing:-0.01em; max-width:60ch; color:#1b1a2e;">Adding a new selling model to a mature platform isn't only a UI problem. Engineering and I had several disagree-and-commit moments along the way. I worked closely with them to define the API model for the solution entity, and we built it out in a customer-obsessed way so the underlying structure matched how buyers and partners actually think about solutions.</p>
+        <p style="font-weight:600; font-size:clamp(17px,1.7vw,20px); line-height:1.5; letter-spacing:-0.01em; max-width:60ch; color:#1b1a2e;">Adding a new selling model to a mature platform isn't only a UI problem. The data model shapes every screen built on top of it, so I worked closely with engineering to define the API model for the solution entity, making sure its structure matched how buyers and partners actually think about solutions. Getting that foundation right early made every later design decision easier.</p>
       </div>
     </section>
 
@@ -384,13 +383,13 @@ class Component extends DCLogic {
       decisions: [
         { no: '01', lbl: 'Key challenge', side: 'Seller · Partner Central', slot: 'mps-s1', src: 'uploads/Create new solution.png', slot2: 'mps-s1b', src2: 'uploads/products.png', ph2: 'Tell us what you sell: add products', ph: 'Create new solution: products + use cases', title: 'A guided flow for building a solution', body: 'Sellers name the solution, attach Marketplace products and services (their own or ones they resell), and describe the use cases it solves, then review everything before creating it. The flow works the same for all four seller types.', todo: "The hardest part was letting sellers add products they don't own. A reseller bundling Elastic had to be able to find and attach another vendor's listing without us exposing that vendor's private pricing. We split it into two steps: 'Tell us what you sell' to pick the products, then private pricing handled later in the offer set, so partners could build the story first and negotiate terms on a deal-by-deal basis afterward." },
         { no: '02', lbl: 'Key tradeoff', side: 'Seller · Partner Central', slot: 'mps-s2', src: 'uploads/Publish solution.png', ph: 'Update visibility', title: 'A clear path from draft to public listing', body: 'The solution details page shows sellers what comes next: enrich the solution with use cases, media, and resources, then activate it: first for APN co-selling benefits, then for a public listing. The visibility step puts the rules right next to the choice (ACE eligibility, at least two Marketplace products with at least one you own, and a use case) and asks for consent from third-party publishers up front.', todo: "Most early solutions won't meet the public listing rules on day one, but we didn't want to stop partners from creating them. So a solution is always saved as Limited first, and the rules only appear at the moment a partner chooses Public. Partners can start co-selling with AWS right away and work toward a listing." },
-        { no: '03', lbl: 'Design principle', side: 'Seller · Partner Central', slot: 'mps-s3', src: 'uploads/Offerset details page.png', ph: 'Offer set details page', title: 'One offer set per customer, with terms per component', body: 'Sellers put private offers for every component into a single offer set for a specific customer. Each offer keeps its own pricing model (contract, pay-as-you-go, or free) and terms, and the whole set is published once.', todo: "Every offer in a set has its own expiration date, buyer accounts, and terms, all of which need to be in sync prior to publishing. Instead of blocking partners with errors while they edit, we check the whole set only at 'Review and publish' and flag any mismatches (like a different buyer account or an offer that expires early) before it goes to the customer." },
-        { no: '04', lbl: 'Key tradeoff', side: 'Where it lands · Buyer', slot: 'mps-s4', src: 'uploads/Comfirmation page.jpg', ph: 'Buyer: solution page / offer set review', title: 'What the seller builds, the buyer buys at once', body: 'On the buyer side, the solution appears as one page listing every product it includes, and the offer set arrives as one purchase: review each offer, see the total cost, and accept once. The confirmation turns that single purchase back into separate agreements, one per component, each with its own next step.', todo: "Buyers wanted one approval, but finance and IT still need to manage each product on its own, especially since each may have different contract types and durations. We kept the purchase bundled and the ownership separate: one acceptance creates one agreement per component, each with its own renewal options and next steps. " },
+        { no: '03', lbl: 'Design principle', side: 'Seller · Partner Central', slot: 'mps-s3', src: 'uploads/Offerset details page.png', ph: 'Offer set details page', title: 'One offer set per customer, with terms per component', body: 'Sellers put private offers for every component into a single offer set for a specific customer. Each offer keeps its own pricing model (contract, pay-as-you-go, or free) and terms, and the whole set is published once.', todo: "Every offer in a set has its own expiration date, buyer accounts, and terms, all of which need to be in sync before publishing. Instead of blocking partners with errors while they edit, we check the whole set only at 'Review and publish' and flag any mismatches (like a different buyer account or an offer that expires early) before it goes to the customer." },
+        { no: '04', lbl: 'Key tradeoff', side: 'Where it lands · Buyer', slot: 'mps-s4', src: 'uploads/Comfirmation page.jpg', ph: 'Buyer: solution page / offer set review', title: 'What sellers build, buyers buy in one step', body: 'On the buyer side, the solution appears as one page listing every product it includes, and the offer set arrives as one purchase: review each offer, see the total cost, and accept once. The confirmation turns that single purchase back into separate agreements, one per component, each with its own next step.', todo: "Buyers wanted one approval, but finance and IT still need to manage each product on its own, especially since each may have different contract types and durations. We kept the purchase bundled and the ownership separate: one acceptance creates one agreement per component, each with its own renewal options and next steps. " },
       ].map((d, i) => ({ ...d, bt: i === 0 ? 'none' : '1px dashed #e4e0f3' })),
       stats: [
         { v: '50+', l: 'Multi-product solutions live at launch' },
         { v: '7-figure', l: 'Total contract value (TCV) of one offer set signed within weeks of launch' },
-        { v: 'All', l: 'AWS Regions where Marketplace operates' },
+        { v: '4', l: 'Seller types supported at launch' },
       ],
     };
   }
